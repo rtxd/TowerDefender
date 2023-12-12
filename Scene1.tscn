@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwc428eyfhu"]
+
+[ext_resource type="Texture2D" uid="uid://cdr2opuup8oxr" path="res://assets/backdrop.png" id="1_bahgr"]
+[ext_resource type="Script" path="res://scripts/CameraScript.gd" id="2_0rqgc"]
+[ext_resource type="Texture2D" uid="uid://bf006xerxvfh0" path="res://assets/Tower_v1.png" id="3_4t5yx"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_bahgr")
+centered = false
+
+[node name="MainCamera" type="Camera2D" parent="."]
+script = ExtResource("2_0rqgc")
+
+[node name="Tower" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(104, 58)
+texture = ExtResource("3_4t5yx")
