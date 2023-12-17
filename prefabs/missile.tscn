@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://638cnixmhd5u"]
+
+[ext_resource type="Script" path="res://scripts/Missile.gd" id="1_mqntu"]
+[ext_resource type="Texture2D" uid="uid://c21xw75h0hlu8" path="res://assets/missile.png" id="2_gsgmp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yjr44"]
+radius = 2.0
+
+[node name="Missile" type="Area2D"]
+scale = Vector2(1.01066, 1)
+gravity_space_override = 1
+gravity_point_unit_distance = 0.003
+script = ExtResource("1_mqntu")
+
+[node name="MissileSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_gsgmp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yjr44")
